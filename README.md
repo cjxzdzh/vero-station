@@ -26,6 +26,41 @@ There is a web UI and an HTTP API. The CLI is there too.
 
 ---
 
+## For agents
+
+The HTTP API is also published as a **separate skill package**:
+**<https://github.com/cjxzdzh/vera-station-http-api>**
+
+The two repositories are companions, and each one points at the other:
+
+| | |
+|---|---|
+| **[cjxzdzh/vero-station](https://github.com/cjxzdzh/vero-station)** (this one) | The service: the BLE layer, the web UI, the CLI, the protocol documentation. |
+| **[cjxzdzh/vera-station-http-api](https://github.com/cjxzdzh/vera-station-http-api)** | The skill: the HTTP API reference for an agent, plus a verifier that checks every documented claim against a running service. |
+
+The skill is **documentation plus a verifier** — it is not a second copy of the
+service, and it does not talk to a device by itself. Install the service
+from this repository, then install the skill wherever your runtime looks for
+skills:
+
+```bash
+git clone https://github.com/cjxzdzh/vera-station-http-api.git
+cp -r vera-station-http-api ~/.hermes/skills/     # Hermes
+cp -r vera-station-http-api ~/.claude/skills/     # Claude Code
+cp -r vera-station-http-api ~/.codex/skills/      # Codex
+```
+
+**One copy, one name.** Two directories with the same skill name make the
+name ambiguous and the skill unloadable. If you install it in more than one
+place, rename the directory in one of them.
+
+The skill's `INSTALL.md` walks through the whole thing, including the one
+step that matters before you write any command: **check whether you are
+pointing at a real device or at the simulator**, because a write against a
+real device moves a real device.
+
+---
+
 ## Install
 
 ### Requirements

@@ -88,7 +88,7 @@ _RECORDS_DIR = RECORDS_DIR
 #: There are TWO shapes, because there are two kinds of file in the
 #: directory:
 #:
-#:   20261024-155150.jsonl          -- a recording this machine took
+#:   <timestamp>.jsonl          -- a recording this machine took
 #:   20261024-155150-导入.jsonl      -- an archive imported from a file
 #:
 #: The "-导入" marker is what tells the list which is which, and it is

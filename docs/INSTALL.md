@@ -15,6 +15,12 @@ what first, and which two error codes are easy to confuse.
 does not talk to a device on its own, and does not need to be running for the
 documentation to be useful.
 
+**This bundle documents a service you install separately.** The service is
+the Vero Station project — <https://github.com/cjxzdzh/vero-station> — and
+this bundle is only its HTTP API reference. If you have not installed the
+service yet, do that first: the routes below are *documented* here, not
+*served*.
+
 ## Step 0 — Check what you are pointing at (MANDATORY)
 
 You are about to write commands that MOVE A PHYSICAL DEVICE. Do this before
@@ -140,7 +146,7 @@ Linux machine without a unit already took.
 
 What it does:
 
-* enumerates the live OpenAPI spec and checks the surface is 49 paths / 51
+* enumerates the live OpenAPI spec and checks the surface is 50 paths / 52
   routes;
 * checks every path the documentation names actually exists;
 * re-runs every **read-only** claim against the deployed service;

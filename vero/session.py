@@ -1893,7 +1893,7 @@ class DeviceSession:
         Without it, the only signal was a failed WRITE -- and a device
         that is switched off while the position is at 0% has no write to
         fail. The link therefore stayed "up" in the UI until the
-        reconnect pass gave up. This was seen in the field: the power
+        reconnect pass gave up, This was seen in the field: the power
         button was long-pressed and the page went on saying 已连接.
 
         The callback runs on bleak's own thread. It must not block, and it

@@ -597,7 +597,7 @@ def record_sort_key(name: str):
     THE COUNTERLESS NAME IS THE FIRST RECORDING OF THAT SECOND, so it
     sorts as counter 0 -- before ``-002``, and before every numbered
     name of the same timestamp. A string sort put it LAST for the same
-    reason: "-002" < "20261023-004903.jsonl" is False, so the plain name
+    reason: "-002" < "<timestamp>.jsonl" is False, so the plain name
     sorted after every suffixed one of the same second, and the FIRST
     recording of a second was listed after the LAST one.
 

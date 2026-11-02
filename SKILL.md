@@ -11,6 +11,12 @@ recording what it actually returned. Where the prose in `README.md` and `docs/`
 would give you a different impression, the measurement below wins — see
 [Measured facts that contradict the docs](#measured-facts-that-contradict-the-docs).
 
+**This skill is a separate download from the service it documents.** The
+service lives in the main repository — <https://github.com/cjxzdzh/vero-station>
+— and this bundle is only its HTTP API reference plus the verifier. If you
+have not installed the service yet, start there; the routes below are
+documented, not served, by this bundle.
+
 ## Two route families
 
 The app serves two independent sets of endpoints. They look similar and are
