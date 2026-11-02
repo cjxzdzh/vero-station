@@ -1,0 +1,63 @@
+{
+  "package_name": "vero-station",
+  "package_version": "1.0.0",
+  "platforms": [
+    "Windows 11 build 22000+",
+    "Linux (BlueZ 5.55+)",
+    "macOS 10.15+"
+  ],
+  "python_required": "3.10+",
+  "entrypoints": {
+    "install": [
+      "install-windows.bat",
+      "install-ubuntu.sh",
+      "install-macos.sh"
+    ],
+    "run": [
+      "run.bat",
+      "run.sh"
+    ],
+    "dispatcher": "bootstrap.py"
+  },
+  "archives": {
+    "note": "ONE archive serves all three platforms. Windows 10 and 11 ship bsdtar, so `tar -xf` opens the tar.gz there as it does on Linux and macOS."
+  },
+  "contents": {
+    "files": 72,
+    "unpacked_bytes": 2634193,
+    "excluded": [
+      ".git (history)",
+      ".venv (not portable)",
+      "node_modules (dev-only)",
+      "analysis (the reverse-engineering corpus, 633 MB)",
+      "vero/data/records, vero/data/state (runtime state)",
+      "docs/audit (this repository's own development trail)"
+    ]
+  },
+  "install": {
+    "pip_source": "the operator's PIP_INDEX_URL wins; VERO_PIP_INDEX is used only when there is none",
+    "mirror_hint": "https://pypi.tuna.tsinghua.edu.cn/simple"
+  },
+  "privacy": {
+    "contains_lan_address": false,
+    "contains_device_serial": false,
+    "contains_device_mac": false,
+    "contains_windows_account_path": false,
+    "contains_cloud_account": false
+  },
+  "warnings": [
+    "The service drives a PHYSICAL device. A write moves it.",
+    "By default no route requires an access token.",
+    "The simulator is opt-in and only start_web.py can reach it; the CLI always drives real hardware."
+  ],
+  "description": "A cross-platform controller for AIKE's Vero and Mira devices: BLE, telemetry, motion control, recording and a web UI. Windows / Linux / macOS, one tree.",
+  "license": "MIT",
+  "repository": "https://github.com/cjxzdzh/vero-station",
+  "devices": {
+    "supported": [
+      "Vero",
+      "Mira"
+    ],
+    "detection": "A device is identified by the PREFIX of its serial (Vero: ALVX/UMVX, Mira: ALMI/UMMI), so no individual unit's identifier is ever needed to match a device."
+  }
+}

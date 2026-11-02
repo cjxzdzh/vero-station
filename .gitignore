@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# The operator's own machine
+.vero-pip-index
+*.pyc
+
+# Runtime state -- recorded sessions and the link's own state. These are
+# real recordings of a real device and belong to nobody who receives
+# this repository.
+vero/data/records/
+vero/data/state/
+
+# The link measurement's output
+report.json
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Secrets. The access token is an environment variable, but a file with
+# one in it must never be committed by accident.
+.env
+*.env

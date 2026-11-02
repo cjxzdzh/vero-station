@@ -1,0 +1,22 @@
+# Command line only -- no web server needed.
+#
+# The bleak constraint is the SAME one requirements.txt carries, on
+# purpose. It used to say "bleak>=0.21" here, which contradicted
+# requirements.txt's "bleak>=3.0,<4": a machine that installed the
+# CLI-only set would get a bleak the code does not support (the
+# scanner/notify signatures in vero/session.py need 3.x), and the two
+# files disagreed about the same dependency.
+#
+# Two files that name the same dependency must name the SAME version.
+# If this file ever diverges from requirements.txt again, the fix is
+# to make them agree -- not to widen the constraint.
+#
+# Nothing in the project reads this file today: the installer always
+# installs requirements.txt. It is kept for an operator who wants to
+# install only the command line's dependencies by hand.
+bleak>=3.0,<4
+
+# The Linux backend's D-Bus binding. bleak declares it as a
+# CONDITIONAL dependency, so naming it here makes the Linux
+# requirement visible rather than changing what gets installed.
+dbus-fast>=1.83.0; sys_platform == "linux"

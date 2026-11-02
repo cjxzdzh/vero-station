@@ -1,0 +1,27 @@
+# Requires Python 3.10+.
+#
+# bleak picks the right native backend per platform:
+#   Windows -> WinRT (via winrt),  Linux -> BlueZ,  macOS -> CoreBluetooth
+#
+# Do NOT loosen this to >=0.21. bleak 3.x is what this code targets; older
+# releases cap out at 0.20.2 and lack the scanner/notify signatures used in
+# vero/session.py. bleak 3.x itself requires Python 3.10+.
+bleak>=3.0,<4
+
+# The Linux backend's D-Bus binding, spelled out.
+#
+# bleak declares it as a CONDITIONAL dependency -- "dbus-fast>=1.83.0 ;
+# sys_platform == 'linux'" -- so pip installs it on Linux and not
+# anywhere else. Naming it here does not change what gets installed; it
+# makes the Linux requirement VISIBLE, and it makes the install fail
+# loudly on a machine where the mirror does not carry it, instead of
+# failing later with an import error from deep inside bleak.
+#
+# It is deliberately NOT pinned to an exact version: the constraint
+# bleak declares is the one that matters, and a second constraint in
+# two places is a second thing to get wrong.
+dbus-fast>=1.83.0; sys_platform == "linux"
+
+# Web UI only. Safe to drop if you only want the CLI.
+fastapi>=0.110
+uvicorn>=0.27

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Vero 遥控">
+<rect width="32" height="32" rx="7" fill="#14111a"/><rect x="0.5" y="0.5" width="31" height="31" rx="6.5" fill="none" stroke="#322c3e"/>
+<rect x="3.0" y="9.5" width="26.0" height="13.0" rx="13.00" fill="none" stroke="#564a6c" stroke-width="1.1"/><ellipse cx="16.00" cy="9.5" rx="13.00" ry="6.76" fill="none" stroke="#564a6c" stroke-width="1.1"/><ellipse cx="16.00" cy="22.5" rx="13.00" ry="6.76" fill="none" stroke="#564a6c" stroke-width="1.1"/>
+<rect x="6.2" y="12.0" width="2.0" height="8.0" rx="1" fill="#1b3a72"/>
+<rect x="10.2" y="12.0" width="2.0" height="8.0" rx="1" fill="#245a94"/>
+<rect x="14.2" y="12.0" width="2.0" height="8.0" rx="1" fill="#2f7fd4"/>
+<rect x="18.2" y="12.0" width="2.0" height="8.0" rx="1" fill="#4f97e0"/>
+<rect x="22.2" y="12.0" width="2.0" height="8.0" rx="1" fill="#74b0ea"/>
+<circle cx="26.4" cy="16" r="3.4" fill="#ff5fa2"/>
+</svg>
