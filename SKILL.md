@@ -17,6 +17,10 @@ service lives in the main repository — <https://github.com/cjxzdzh/vero-statio
 have not installed the service yet, start there; the routes below are
 documented, not served, by this bundle.
 
+**And it is published on its own too**, as a ready-to-install agent skill:
+**<https://github.com/cjxzdzh/vera-station-http-api>**. That is the
+repository to clone if you want the API reference without the service.
+
 ## Two route families
 
 The app serves two independent sets of endpoints. They look similar and are

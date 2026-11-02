@@ -21,6 +21,10 @@ this bundle is only its HTTP API reference. If you have not installed the
 service yet, do that first: the routes below are *documented* here, not
 *served*.
 
+The bundle is published on its own as a ready-to-install agent skill:
+**<https://github.com/cjxzdzh/vera-station-http-api>** — that is the
+repository to clone if you want the API reference without the service.
+
 ## Step 0 — Check what you are pointing at (MANDATORY)
 
 You are about to write commands that MOVE A PHYSICAL DEVICE. Do this before
